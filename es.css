@@ -1,0 +1,427 @@
+body{
+    background: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+  background-color: #111 transparent;
+  backdrop-filter: blur(7px);
+  color: white;
+  padding: 20px 50px;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search a{
+  margin-left: 35px;
+}
+.sidebar{
+    position: fixed;
+    right: 0px;
+    top: 0;
+    padding-top: 20px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    color: #fff;
+    background: rgb(37, 36, 36);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    transition: 0.5s ease-in-out;
+}
+.sidebar li{
+    width: 100%;
+    color: #fff;
+}
+.menu-button{
+    display: none;
+    /* right: 500px; */
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+}
+@media(max-width: 900px){
+    .rn{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .menu-button{
+        display:block;
+    }
+    .mwsa{
+        display: grid;
+    }
+    /* .sidebar{
+        width: 100%;
+    } */
+   
+}
+@media(max-width:440px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+
+nav a{
+    text-decoration: none;
+    color:#d6d4d4;
+    position: relative;
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    transition-timing-function: ease;
+    transform: scaleX(0);;
+}
+nav a:hover::after{
+    transform: scaleX(1);
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    width: 80px;
+    height: 28px;
+    border-radius: 16px;
+    background: transparent;
+    border: 2px solid rgb(47, 46, 46);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+button:hover{
+    width: 75px;
+    background-color: black;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 30;
+  }
+  
+  .slider {
+    background: url(https://th.bing.com/th/id/OIG1.iKEhuZdQbCJruk2P1a9G?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn) cover ;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+  }
+  
+  .sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+  }
+  
+  .sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .sliderImg {
+    z-index: 1;
+  }
+  
+  .sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    }
+  .sliderTitle:hover{
+    transform:translateY(-20px);
+  }
+  
+  .sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 7px;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+  }
+  .sliderPrice:hover{
+    border: #ffffff 2px;
+  }
+  
+  .buyButton {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: 1px solid gray;
+    background-color: black transparent;
+    backdrop-filter: blur(7px);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .buyButton:hover {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: black;
+  }
+  
+  .sliderItem:nth-child(1) .sliderBg {
+    background-color: #369e62;
+  }
+  .sliderItem:nth-child(2) .sliderBg {
+    background-color: rebeccapurple;
+  }
+  .sliderItem:nth-child(3) .sliderBg {
+    background-color: teal;
+  }
+  .sliderItem:nth-child(4) .sliderBg {
+    background-color: cornflowerblue;
+  }
+  .sliderItem:nth-child(5) .sliderBg {
+    background-color: rgb(124, 115, 80);
+  }
+  
+  .sliderItem:nth-child(1) .sliderPrice {
+    color: #369e62;
+  }
+  .sliderItem:nth-child(2) .sliderPrice {
+    color: white;
+  }
+  .sliderItem:nth-child(3) .sliderPrice {
+    color: teal;
+  }
+  .sliderItem:nth-child(4) .sliderPrice {
+    color: cornflowerblue;
+  }
+  .sliderItem:nth-child(5) .sliderPrice {
+    color: cornsilk;
+  }
+
+  .cds{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 3rem;
+  }
+  .card {
+    width: 300px;
+    height: 400px;
+    padding: .8em;
+    background: transparent;
+    backdrop-filter: blur(7px);
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: 0.5s ease-in-out;
+   }
+   .card:hover{
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+   }
+   
+   .card-img {
+    background-color: #686562;
+    height: 40%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+   }
+   
+   .card-info {
+    padding-top: 10%;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+   }
+   
+   .text-body {
+    font-size: .9em;
+    padding-bottom: 10px;
+   }
+   
+   /*Button*/
+   .card-button {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    color: #ffffff;
+   }
+   
+   /*Hover*/
+   .card-img:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+   .card-button:hover {
+    color: black;
+    border: 1px solid #edebe9;
+    background-color: #c7c2bf;
+   }
+  
+  /* === removing default button style ===*/
+.bu {
+  margin: auto;
+  /* padding-left: 60px; */
+  width: 177px;
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.bu {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #999999;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.bu:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 5px 23px var(--animation-color))
+}
+
+.heading {
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading::before {
+  margin-left: auto;
+}
+
+.heading::after, .heading::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  transition: 0.5s;
+}
+
+.heading:hover::after, .heading:hover::before {
+  width: 100%;
+}
+
+.modal-body input{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.modal-body input[type=radio]{
+  accent-color: white;
+}
+
+.message{
+  position:sticky;
+  top: 0; left: 0; right: 0;
+  padding: 15px 10px;
+  background-color: transparent;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: white;
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
